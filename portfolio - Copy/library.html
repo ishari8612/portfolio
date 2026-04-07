@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+</head>
+
+<body>
+
+    <h1>Library Management System</h1>
+
+    <!-- Clickable Image -->
+    <img src="images/bookrecords.jpg" width="300" onclick="openImage(this.src)">
+    <img src="images/borrowrecords.jpg" width="300" onclick="openImage(this.src)">
+    <img src="images/borrowrec.jpg" width="300" onclick="openImage(this.src)">
+    <img src="images/member records.jpg" width="300" onclick="openImage(this.src)">
+    
+  <p>
+        This system helps manage library operations such as issuing books,
+        returning books, and managing users.
+    </p>
+
+    <h3>Technologies Used:</h3>
+    <ul>
+        <li>.NET</li>
+        <li>C#</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL Server</li>
+    </ul>
+
+    <br>
+    <a href="index.html">← Back to Home</a>
+
+    <!-- Image Modal -->
+    <div id="imageModal" onclick="closeImage()" 
+         style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; text-align:center;">
+        
+        <img id="modalImg" style="max-width:90%; max-height:90%; margin-top:5%;">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function openImage(src){
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImg").src = src;
+        }
+
+        function closeImage(){
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

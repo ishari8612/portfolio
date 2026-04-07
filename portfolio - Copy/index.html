@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio- Ishari</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4d04e9a80d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+            <h1> <a href="index.html">Ishari Priyadarshani</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h2>My Portfolio</h2>
+            <p>Hey I'm <span>Ishari Priyadarshani</span>.</p>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/grad1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I’m an enthusiastic IT undergraduate with a strong interest in coding
+                        and software development. I enjoy solving problems, learning new
+                        technologies, and working with others to build creative solutions. I’m
+                        eager to apply what I’ve learned in the classroom to real-world
+                        projects and gain hands-on experience</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>React</span></li>
+                            <li><span>Node.js</span></li>
+                            <li><span>C#</span></li>
+                            <li><span>.Net</span></li>
+                            <li><span>SQL</span></li>
+                            <li><span>PHP</span></li>
+                            <li><span>Vue.js</span></li>
+                            <li><span>Laravel</span></li>
+                            <li><span>Git</span></li>
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Library Management System</span>
+                                <li>.Net</li>
+                                <li>C#</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SQL Server</li>  </li>
+                            <li><span>Inventory Management
+                            System</span>
+                                <li>CSS
+                                <li>HTML</li>
+                                </li>
+                                <li>PHP</li>
+                                <li>SQL Server</li>
+                            </li>
+                            <li><span>Online Store</span>
+                               <li>PHP</li>
+                               <li>HTML</li>
+                               <li>CSS</li>
+                               <li>SQL Server</li>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Diploma in Information Technology</span><br>University of Colombo</li>
+                            <li><span>Bachelor of Information Technology</span><br>University of Colombo (reading)</li>
+                            
+                        </ul>
+                </div>
+            </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitles">My Services  </h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I create responsive and user-friendly websites using HTML, CSS, JavaScript, and React, vuejs, PHP, Laravel, MySql</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitles">My Projects</h1>
+
+        <div class="portfolio-list">
+
+            <!-- Project 1 -->
+            <div class="work">
+                <a href="library.html">
+                    <img src="images/library.jpg">
+                    <div class="layer">
+                        <h2>Library Management System</h2>
+                        <p>Click to view full details</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="work">
+                <a href="inventory.html">
+                    <img src="images/items.jpg">
+                    <div class="layer">
+                        <h2>Inventory Management System</h2>
+                        <p>Click to view full details</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="work">
+                <a href="myshop.html">
+                    <img src="images/myshop.jpg">
+                    <div class="layer">
+                        <h2>Online Store</h2>
+                        <p>Click to view full details</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+   
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+</html>
